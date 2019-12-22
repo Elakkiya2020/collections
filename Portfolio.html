@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+<link href="media-queries.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- Start pagewrap-->
+<div id="pagewrap">
+
+<header id="header">
+
+
+<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Portfolio.html">Portfolio</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		
+		</ul>
+		<a href="#" id="pull">Menu</a>
+	</nav>
+
+</header>
+
+<div id="portfolio">
+
+		
+    <article class="projects-one">
+
+			<header>
+				<h1 class="post-title"><a href="#">Royal Look</a></h1>
+			
+			</header>
+			<figure class="post-image"> 
+			<a href="http://royallook.in/" target="_new"><img src="images/royallook.jpg" /> </a>
+			</figure>
+            
+            </article> 
+			
+            <article class="projects-two">
+
+			<header>
+				<h1 class="post-title"><a href="#">Helini Bio-Molecules</a></h1>
+			
+			</header>
+			<figure class="post-image"> 
+			<a href="http://www.helinibiomolecules.com/" target="_new"><img src="images/helini.jpg" /> </a>
+			</figure>
+            
+            </article> 
+            
+<article class="projects-one">
+
+			<header>
+				<h1 class="post-title"><a href="#">Eye on you marketing</a></h1>
+			
+			</header>
+			<figure class="post-image"> 
+				<a href="http://www.eyeonmarketingsolutions.com/" target="_new"><img src="images/eye.jpg"/></a> 
+</figure>
+            
+            </article>
+            
+             <article class="projects-two">
+
+			<header>
+				<h1 class="post-title"><a href="#">KeriCure</a></h1>
+			
+			</header>
+			<figure class="post-image"> 
+				<a href="http://kericure.com/" target="_new"><img src="images/kericure.jpg" /></a> 
+			</figure>
+            
+            </article> 
+    </div>    
+
+
+</div>
+
+<!-- End pagewrap-->
+</body>
+</html>

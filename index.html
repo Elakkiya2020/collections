@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
+<link href="media-queries.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+
+<body>
+<!-- Start pagewrap-->
+<div id="pagewrap">
+
+<header id="header">
+
+
+<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Portfolio.html">Portfolio</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		
+		</ul>
+		<a href="#" id="pull">Menu</a>
+	</nav>
+
+</header>
+
+<div id="content">
+
+		<article class="post clearfix">
+
+			<header>
+				<h1 class="post-title"><a href="#">About Me</a></h1>
+			
+			</header>
+			
+            
+            <p align="justify">I'm a UI Designer and Front End Developer from Chennai.
+I enjoy taking complex problems and turning them into simple and beautiful 
+interface designs. I also love the logic and structure of coding and 
+always strive to write elegant and efficient code, whether it be HTML, CSS or jQuery.</p>
+			<p align="justify">A bright, talented, ambitious and self-motivated web designer with a strong technical background
+             who possesses self-discipline and the ability to work with the minimum of supervision.
+              Able to play a key role throughout a sites development to ensure maximum accessibility, customer experience and usability.
+              A good team player who thrives on creating engaging creative solutions,
+               is deadline orientated and has the ability to produce detailed technical specifications from client requirements.</p>
+<p align="justify">A quick learner who can absorb new ideas and can communicate clearly and effectively.
+ Currently looking for a opportunity to join a dynamic, ambitious, growing company and forge a career as a website designer.</p>
+
+		<p align="justify">Accomplished web designer & front-end developer
+with extensive experience building websites, HTML5, CSS3 and various web scripting
+technologies, web standards and project management.
+ Enthusiastic web professional
+motivated by challenging projects and deadlines.</p>
+
+		</article>
+		<!-- /.post -->
+        
+    </div>    	<aside id="sidebar">
+
+		<section class="widget">
+			<h4 class="widgettitle">Interst</h4>
+			<ul>
+				<li><a href="#">Responsive Design</a> </li>
+				<li><a href="#">PSD To HTML</a> </li>
+				<li><a href="#">Mobile Site </a></li>
+			</ul>
+		</section>
+		<!-- /.widget -->
+
+						
+	</aside>
+
+	
+
+
+</div>
+
+<!-- End pagewrap-->
+</body>
+</html>
